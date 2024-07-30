@@ -1,0 +1,166 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600;700&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+}
+
+body, html {
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    background-color: black;
+}
+
+.background-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.background-container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("https://assets.b9.com.br/wp-content/uploads/2019/05/netflix-library-1280x720.jpg");
+    background-size: cover;
+    background-position: center;
+    background-color: rgba(0, 0, 0, 0.5); /* Adiciona uma camada de cor preta semi-transparente */
+    background-blend-mode: darken; /* Mistura a cor com a imagem de fundo */
+    z-index: -1; /* Garante que a imagem fique atrás do conteúdo */
+}
+
+nav {
+    position: fixed;
+    padding: 19px 30px; /*25px top and bottom,30px right and left*/
+    z-index: 1; /* Garante que o nav fique na frente da imagem de fundo */
+}
+
+nav img {
+    width: 89px; /*Define a largura da imagem dentro do nav */
+}
+
+.form-wrapper {
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 450px;
+    padding: 90px;
+    background-color: rgba(0, 0, 0, 0.75); /* Fundo semi-transparente para contraste */
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 1; /* Garante que o formulário fique na frente da imagem de fundo */
+}
+
+.form-wrapper h2 {
+    color: white;
+    font-size: 30px;
+}
+
+form {
+    margin: 20px 0; /*20px top and bottom,0 pixels left and right*/
+}
+
+.form-control {
+    height: 40px;
+    position: relative;
+    margin-bottom: 16px; /*Use margin-bottom instead of bottom for spacing*/
+}
+
+.form-control input {
+    width: 100%;
+    height: 100%;
+    background-color: #333333;
+    border: none;
+    border-radius: 4px;
+    color: white;
+    font-size: 16px;
+    padding: 0 10px; /*Optional:Adds some padding inside the input field*/
+    box-sizing: border-box; /*Ensures padding is included in the width and height*/
+}
+
+.form-control label {
+    position: absolute;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 16px;
+    color: #8c8c8c;
+    pointer-events: none; /*Ensures the label does not interfere with clicks on the input field */
+    transition: all 0.1s ease; /*smooth transition for any changes*/
+}
+
+button {
+    width: 100%;
+    padding: 12px 0; /*12px top and bottom, 0 pixels right and left */
+    margin: 10px 0; /*10px top and bottom, 0 pixels right and left */
+    font-size: 16px;
+    background-color: #e50914;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer; /*shows a pointer cursor on hover*/
+}
+
+#code {
+    background-color: #464646; /*Define a cor de fundo do botão do ID code*/
+}
+
+label, p, small, a {
+    color: #737373; /*Define a cor do texto para label,p,small e a tags*/
+}
+
+#or {
+    text-align: center; /*Alinha o texto do p com ID or ao centro */
+}
+
+.form-wrapper a {
+    text-decoration: none; /*Remove o sublinhado dos links dentro da classe form-wrapper*/
+}
+
+.form-wrapper p a {
+    color: white; /*Define a cor do texto dos links dentro de <p> na classe form-wrapper como branco*/
+}
+
+small {
+    display: block; /*Define o display do <small> como block*/
+    margin-top: 15px; /*Adiciona margem superior de 15 pixels */
+}
+
+.form-wrapper small a {
+    color: #0071eb; /*Define a cor dos links dentro da tag <small> na classe form-wrapper como #0071eb*/
+}
+
+.form-help {
+    display: flex; /* Define o display da classe form-help como flexível */
+    justify-content: space-between; /*Espaça os itens dentro da form-help igualmente*/
+}
+
+.remember-me {
+    display: flex; /*Define o display da classe remember-me como flexível*/
+}
+
+.remember-me input {
+    margin-right: 5px; /*Adiciona margem direita de 5 pixels ao input dentro da classe remember-me*/
+}
+
+.form-wrapper a:hover {
+    text-decoration: underline;
+}
+
+form .form-help :where(label, a) {
+    font-size: 14px;
+}
+
+form button:hover, #code:hover {
+    opacity: 0.8;
+}
